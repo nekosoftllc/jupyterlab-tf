@@ -1,3 +1,11 @@
+# A Dockerfile for using Jupyter Lab with Tensorflow and BigQuery
+
+# https://hub.docker.com/r/nekosoft/tensorflow-notebook
+
+# How to run
+# ==========
+# docker run -it --name jupyterlab-tf -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes nekosoft/tensorflow-notebook
+
 ARG BASE_CONTAINER=jupyter/tensorflow-notebook
 FROM $BASE_CONTAINER
 
