@@ -11,7 +11,7 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="federico@nekosoft.org"
 LABEL vendor="NekoSoft LLC"
-LABEL description="A Dockerfile for using Jupyter Lab with Tensorflow and BigQuery - based on jupyter/tensorflow-notebook"
+LABEL description="Jupyter Lab container including Git plugin, with Tensorflow and BigQuery - based on jupyter/tensorflow-notebook"
 
 RUN conda install --quiet --yes \
     'jupyterlab-git==0.23.3' \
