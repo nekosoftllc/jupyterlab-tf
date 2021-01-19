@@ -9,6 +9,10 @@
 ARG BASE_CONTAINER=jupyter/tensorflow-notebook
 FROM $BASE_CONTAINER
 
+LABEL maintainer="federico@nekosoft.org"
+LABEL vendor="NekoSoft LLC"
+LABEL description="A Dockerfile for using Jupyter Lab with Tensorflow and BigQuery - based on jupyter/tensorflow-notebook"
+
 RUN conda install --quiet --yes \
     'jupyterlab-git==0.23.3' \
     'google-cloud-bigquery[pandas]' && \
@@ -24,4 +28,3 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
     | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - \
     && apt-get update -y && apt-get install google-cloud-sdk -y
-    
